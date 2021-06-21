@@ -19,6 +19,12 @@
         <activity android:name=".CalculatorActivity">
 
         </activity>
+        <activity android:name=".NotepadActivity">
+
+        </activity>
+        <activity android:name=".NewNoteActivity">
+
+        </activity>
     </application>
 
 </manifest>

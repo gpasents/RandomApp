@@ -5,24 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        if (true){
-            val intent = Intent(this,CalculatorActivity::class.java)
+        val number = (0..1).random()
+        if (number == 1){
+            val intent = Intent(this,NotepadActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
             startActivity(intent)
-        }else{
-            setContentView(R.layout.test_activity)
+        }else if(number == 0){
+            val intent = Intent(this,CalculatorActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
+            startActivity(intent)
         }
-
-
-//        val button = findViewById<Button>(R.id.button)
-//        button.setOnClickListener {
-//            val intent = Intent(this,CalculatorActivity::class.java)
-//            startActivity(intent)
-//        }
-
     }
 }

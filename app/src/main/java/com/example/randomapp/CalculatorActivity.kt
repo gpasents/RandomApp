@@ -7,6 +7,12 @@ import android.widget.Button
 import android.widget.TextView
 
 class CalculatorActivity : AppCompatActivity() {
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calc)
@@ -38,6 +44,7 @@ class CalculatorActivity : AppCompatActivity() {
         val buttonMult = findViewById<Button>(R.id.buttonMult)
         val buttonDiv = findViewById<Button>(R.id.buttonDiv)
         val buttonEqu = findViewById<Button>(R.id.buttonEqu)
+
 
         fun buttonClick(number:String){
             if (resultFlag){
